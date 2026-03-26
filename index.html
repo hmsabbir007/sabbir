@@ -3,9 +3,190 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World</title>
+    <title>My Portfolio</title>
+    <style>
+        :root {
+            --bg: #f4f6fb;
+            --primary: #2a8aff;
+            --secondary: #1f2a4d;
+            --accent: #ff7f50;
+            --card: #ffffff;
+            --text: #223344;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text);
+            background-color: var(--bg);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(150deg, var(--primary), #2a6efe);
+            color: white;
+            padding: 4rem 1.5rem 3rem;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: clamp(2rem, 5vw, 3rem);
+        }
+
+        header p {
+            max-width: 680px;
+            margin: 1rem auto 1.5rem;
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background: white;
+            color: var(--primary);
+            border-radius: 999px;
+            padding: 0.8rem 1.6rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.2s ease;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        main {
+            margin: -1.5rem auto 2rem;
+            max-width: 1100px;
+            padding: 0 1.5rem 2rem;
+        }
+
+        section {
+            margin-top: 2rem;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .card {
+            background: var(--card);
+            border-radius: 16px;
+            box-shadow: 0 12px 30px rgba(34, 50, 80, 0.09);
+            border: 1px solid #e6ecff;
+            padding: 1.15rem;
+        }
+
+        .card h3 {
+            margin-top: 0;
+        }
+
+        .skills-list,
+        .contact-list {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 0.6rem;
+        }
+
+        .skills-list li,
+        .contact-list li {
+            background: #eff4ff;
+            border-radius: 12px;
+            padding: 0.4rem 0.7rem;
+            border: 1px dashed #d8e2ff;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            text-align: center;
+            color: #5f7397;
+            font-size: 0.9rem;
+            margin: 2rem 0 1rem;
+        }
+
+        @media (max-width: 640px) {
+            header {
+                padding: 3rem 1rem 2rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello, World!</h1>
+    <header>
+        <h1>Jane Doe</h1>
+        <p>Product Designer &amp; Frontend Developer building impactful web experiences with modern tools and clean UX.</p>
+        <a class="btn-primary" href="#projects">View Projects</a>
+    </header>
+
+    <main>
+        <section id="about" class="card">
+            <h2>About Me</h2>
+            <p>Hello! I'm Jane, a versatile creator working at the intersection of design and engineering. I love crafting intuitive interfaces and bringing ideas to life through code.</p>
+            <p>When I'm not creating interfaces, I enjoy photography, hiking, and mentoring junior developers.</p>
+        </section>
+
+        <section id="projects">
+            <h2>Featured Projects</h2>
+            <div class="cards">
+                <article class="card">
+                    <h3>Design System Kit</h3>
+                    <p>Modular UI library for enterprise products with accessible components, theme support, and responsive layout utilities.</p>
+                    <p><strong>Tech:</strong> Figma, React, TypeScript</p>
+                </article>
+                <article class="card">
+                    <h3>E-commerce Dashboard</h3>
+                    <p>Real-time analytics dashboard to monitor sales, inventory, and user behavior using chart visualizations and role-based access.</p>
+                    <p><strong>Tech:</strong> Next.js, GraphQL, Tailwind</p>
+                </article>
+                <article class="card">
+                    <h3>Personal Blog</h3>
+                    <p>SEO-friendly blog with markdown writing workflow and static generation. Includes comments and newsletter signup.</p>
+                    <p><strong>Tech:</strong> Astro, Markdown, Vercel</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul class="skills-list">
+                <li>HTML/CSS</li>
+                <li>JavaScript/TypeScript</li>
+                <li>React</li>
+                <li>UI/UX Design</li>
+                <li>Accessibility</li>
+                <li>Design Systems</li>
+                <li>API Integration</li>
+            </ul>
+        </section>
+
+        <section id="contact" class="card">
+            <h2>Contact</h2>
+            <p>Let's work together or chat about your next project.</p>
+            <ul class="contact-list">
+                <li>Email: hello@example.com</li>
+                <li>LinkedIn: /in/janedoe</li>
+                <li>GitHub: @janedoe</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Crafted with attention to detail · last updated 2026</p>
+    </footer>
 </body>
 </html>
